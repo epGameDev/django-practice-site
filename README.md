@@ -40,4 +40,4 @@ python manage.py runserver
 ```
 ## Creating Apps For The Project
 
-In order to get functionality from a Django project, we need to create apps for our project to connect with and utilize. 
+In order to get functionality from a Django project, we need to create apps (modules) for our project to connect with and utilize. In Django, apps are sections or parts of our project, dealing with specific functionality or features. For example, in an e-commerce application you can have one app for the store front, one for customer accounts, one for the cart and one for checkout.
