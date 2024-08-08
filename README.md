@@ -1,3 +1,7 @@
+**-- This README is being constructed as I progress through the project. Information may not yet be accurate. --**
+
+<br/>
+
 # Starting A Django Project
 
 First thing to do is to install the latest version of [python](https://www.python.org/downloads/ "python.org") and then use the python package manager `pip` to install django globally.
