@@ -1,5 +1,5 @@
-from django.shortcuts import render;
-from django.http import HttpResponse, HttpResponseNotFound;
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 monthly_challenges = {
 "january": "Learn Design, HTML, and CSS",
@@ -19,12 +19,23 @@ monthly_challenges = {
 
 # Create your views here.
 def index(request):
-  return HttpResponse("Hello World!");
+  return HttpResponse("Hello World!")
+
+
+def monthly_challenge_index(request, month):
+
+  try:
+    months = list(monthly_challenges.keys())
+    month_redirect = months[month - 1]
+    return HttpResponseRedirect(redirect_to="/" + month_redirect)
+  except:
+    return HttpResponseNotFound("This page you are looking for is not found. Check your spelling or contact the site support.")
+
 
 def monthly_challenge(request, month):
 
   try:
-    challenge_text = monthly_challenges[month];
-    return HttpResponse(f'Your challenge for the money: {challenge_text}');
+    challenge_text = monthly_challenges[month]
+    return HttpResponse(f'Your challenge for the money: {challenge_text}')
   except:
-    return HttpResponseNotFound("This page you are looking for is not found. Check your spelling or contact the site support.");
+    return HttpResponseNotFound("This page you are looking for is not found. Check your spelling or contact the site support.")
