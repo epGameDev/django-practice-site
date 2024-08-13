@@ -4,15 +4,42 @@
 
 # Starting A Django Project
 
-First thing to do is to install the latest version of [python](https://www.python.org/downloads/ "python.org") and then use the python package manager `pip` to install django globally.
+If you haven't done so, make sure you already have python installed. To install the latest version of python, go to the official site [python.org](https://www.python.org/downloads/ "python.org") and download the latest version for your operating system. I will be using Linux and the bash terminal.
+
+Before starting any python project, it is best to create a virtual environment. Virtual environments create a project level separation of modules and libraries so that every project gets a version of the modules they need without effecting anything globally. 
+
+To start, we need to create the setup files for the virtual environment. We do this with the command:
 
 ```bash
-python -m pip install Django
+python -m venv env
 ```
 
 <br/>
 
-With that you have it set up globally and you can check that with the following command:
+Then we need to activate the virtual environment. Run these commands bellow:
+
+```bash
+# start the virtual environment
+source env/bin/activate
+
+# if you need to deactivate from a virtual environment, use command:
+deactivate
+```
+<br/>
+
+We have our virtual environment up and running. Let's get django added to our environment using pip, python's package manager:  
+
+```bash
+# Assuming you already have python installed, use pip to install packages
+pip install django
+
+# Or if you need a specific version
+pip install django==3.6
+```
+
+<br/>
+
+You can check that it was downloaded successfully by using following command:
 
 ```bash
 # You may have to use python3 if you have older versions of python on your system.
@@ -21,13 +48,15 @@ python -m django --version
 ```
 <br/>
 
-After you get Django installed, it is time to create a project. Create a project folder and open it in your IDE (VSCode for me). When in this folder, select open folder and navigate to your newly created folder. Once open, open up the integrated terminal in the IDE or simply navigate to the project folder in your systems main terminal application. In there you will create a Django project with this command:
+After you get Django installed, it is time to create a project. 
+
+Create a project folder and open it in your IDE (VSCode for me). When in this folder, Once open, use the integrated terminal in the IDE or simply navigate to the project folder in your systems main terminal application. In there you will create a Django project with this command:
 
 
 ```bash
-# The project name "mysite" can be whatever you want to name your project.
+# The project folder name "config" can be whatever you want to name your project settings folder.
 # The optional period at the end will stop the setup from creating two folders of the same name.
-django-admin startproject mysite .
+django-admin startproject config .
 ```
 <br/>
 
