@@ -16,7 +16,7 @@ python -m venv env
 
 <br/>
 
-Then we need to activate the virtual environment. Run these commands bellow:
+Then we need to activate the virtual environment. Run the command bellow:
 
 ```bash
 # start the virtual environment
