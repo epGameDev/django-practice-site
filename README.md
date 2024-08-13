@@ -6,9 +6,17 @@
 
 If you haven't done so, make sure you already have python installed. To install the latest version of python, go to the official site [python.org](https://www.python.org/downloads/ "python.org") and download the latest version for your operating system. I will be using Linux and the bash terminal.
 
+Find a location on your hard drive where you want your project to be located at. Name it the name of your project. Open the folder in your IDE (VSCode for me), and launch the terminal. You can also use the operating system's main terminal application, and navigate to the project folder using:
+
+```bash
+cd path/to/project/folder
+```
+
+<br/>
+
 Before starting any python project, it is best to create a virtual environment. Virtual environments create a project level separation of modules and libraries so that every project gets a version of the modules they need without effecting anything globally. 
 
-To start, we need to create the setup files for the virtual environment. We do this with the command:
+To start, we need to create the setup files for the virtual environment in your project folder. We do this with the command:
 
 ```bash
 python -m venv env
@@ -48,9 +56,7 @@ python -m django --version
 ```
 <br/>
 
-After you get Django installed, it is time to create a project. 
-
-Create a project folder and open it in your IDE (VSCode for me). When in this folder, Once open, use the integrated terminal in the IDE or simply navigate to the project folder in your systems main terminal application. In there you will create a Django project with this command:
+After you get Django installed, it is time to create a project and give it a name. I chose to call it config because it holds all the settings files and is the main point of configuring your project. To do this, you will run this command:
 
 
 ```bash
